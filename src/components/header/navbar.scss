@@ -1,0 +1,16 @@
+.dropdown{
+    position: relative;
+    .dropdown-menu{
+        width: max-content;
+        position: absolute;
+        top: 98%;
+        left: 0;
+        background-color: #0ea5e9;
+        display: none;
+    }
+    &:hover{
+        .dropdown-menu{
+            display: block;
+        }
+    }
+}
