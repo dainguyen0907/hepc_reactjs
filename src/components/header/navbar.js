@@ -6,7 +6,7 @@ import "./navbar.scss";
 
 class navbar extends React.Component {
     state={
-        statusButton:false,
+        statusButton:true,
         class:"items-center uppercase text-white justify-center lg:flex hidden",
     }
 
@@ -25,12 +25,12 @@ class navbar extends React.Component {
 
     render() {
         return (
-            <div className="bg-sky-500">
+            <div className="bg-sky-500 relative z-50">
                 <nav className='container mx-auto 2xl:px-40'>
                     <button className="text-white lg:hidden p-4 button-menu" onClick={(e)=>this.onHandleButton()}><FontAwesomeIcon icon={faBars}/></button>
                     <ul className={this.state.class} >
-                        <li className="border-r-2 border-dashed border-white p-2 lg:hover:bg-blue-500 lg:hover:scale-105 transition duration-300 ease-in-out "><Link to="/"><FontAwesomeIcon icon={faHome} /></Link></li>
-                        <li className="border-r-2 border-dashed border-white p-2 lg:hover:bg-blue-500 lg:hover:scale-105 transition duration-300 ease-in-out cursor-pointer dropdown">
+                        <li className="lg:border-r-2 border-dashed border-white p-2 lg:hover:bg-blue-500 lg:hover:scale-105 transition duration-300 ease-in-out "><Link to="/"><FontAwesomeIcon icon={faHome} /></Link></li>
+                        <li className="lg:border-r-2 border-dashed border-white p-2 lg:hover:bg-blue-500 lg:hover:scale-105 transition duration-300 ease-in-out cursor-pointer dropdown">
                             Giới thiệu
                             <ul className="dropdown-menu">
                                 <li className="p-2 lg:hover:bg-blue-500 lg:hover:scale-105 duration-300 ease-in-out">Sơ đồ tổ chức</li>
@@ -39,7 +39,7 @@ class navbar extends React.Component {
                                 <li className="p-2 lg:hover:bg-blue-500 lg:hover:scale-105 duration-300 ease-in-out">Sứ mạng</li>
                             </ul>
                         </li>
-                        <li className="border-r-2 border-dashed border-white p-2 lg:hover:bg-blue-500 lg:hover:scale-105 transition duration-300 ease-in-out cursor-pointer dropdown">
+                        <li className="lg:border-r-2 border-dashed border-white p-2 lg:hover:bg-blue-500 lg:hover:scale-105 transition duration-300 ease-in-out cursor-pointer dropdown">
                             Chuyên trang
                             <ul className="dropdown-menu">
                                 <li className="p-2 lg:hover:bg-blue-500 lg:hover:scale-105 duration-300 ease-in-out">Thời khoá biểu</li>
@@ -48,7 +48,7 @@ class navbar extends React.Component {
                                 <li className="p-2 lg:hover:bg-blue-500 lg:hover:scale-105 duration-300 ease-in-out">3 Công khai</li>
                             </ul>
                         </li>
-                        <li className="border-r-2 border-dashed border-white p-2 lg:hover:bg-blue-500 lg:hover:scale-105 transition duration-300 ease-in-out cursor-pointer dropdown">
+                        <li className="lg:border-r-2 border-dashed border-white p-2 lg:hover:bg-blue-500 lg:hover:scale-105 transition duration-300 ease-in-out cursor-pointer dropdown">
                             Khoa chuyên ngành
                             <ul className="dropdown-menu">
                                 <li className="p-2 lg:hover:bg-blue-500 lg:hover:scale-105 duration-300 ease-in-out">Khoa hệ thống điện</li>
@@ -60,7 +60,7 @@ class navbar extends React.Component {
                                 <li className="p-2 lg:hover:bg-blue-500 lg:hover:scale-105 duration-300 ease-in-out">Khoa đào tạo nâng cao</li>
                             </ul>
                         </li>
-                        <li className="border-r-2 border-dashed border-white p-2 lg:hover:bg-blue-500 lg:hover:scale-105 transition duration-300 ease-in-out cursor-pointer dropdown">
+                        <li className="lg:border-r-2 border-dashed border-white p-2 lg:hover:bg-blue-500 lg:hover:scale-105 transition duration-300 ease-in-out cursor-pointer dropdown">
                             Phòng - trung tâm
                             <ul className="dropdown-menu">
                                 <li className="p-2 lg:hover:bg-blue-500 lg:hover:scale-105 duration-300 ease-in-out">Phòng đào tạo</li>
@@ -72,9 +72,9 @@ class navbar extends React.Component {
                                 <li className="p-2 lg:hover:bg-blue-500 lg:hover:scale-105 duration-300 ease-in-out">Trung tâm công nghệ năng lượng</li>
                             </ul>
                         </li>
-                        <li className="border-r-2 border-dashed border-white p-2 lg:hover:bg-blue-500 lg:hover:scale-105 transition duration-300 ease-in-out">Tuyển sinh</li>
-                        <li className="border-r-2 border-dashed border-white p-2 lg:hover:bg-blue-500 lg:hover:scale-105 transition duration-300 ease-in-out">Tra cứu văn bằng</li>
-                        <li className="border-r-2 border-dashed border-white p-2 lg:hover:bg-blue-500 lg:hover:scale-105 transition duration-300 ease-in-out">liên hệ</li>
+                        <li className="lg:border-r-2 border-dashed border-white p-2 lg:hover:bg-blue-500 lg:hover:scale-105 transition duration-300 ease-in-out">Tuyển sinh</li>
+                        <li className="lg:border-r-2 border-dashed border-white p-2 lg:hover:bg-blue-500 lg:hover:scale-105 transition duration-300 ease-in-out">Tra cứu văn bằng</li>
+                        <li className="lg:border-r-2 border-dashed border-white p-2 lg:hover:bg-blue-500 lg:hover:scale-105 transition duration-300 ease-in-out">liên hệ</li>
                         <li className="p-2 lg:hover:bg-blue-500 lg:hover:scale-105 duration-300 ease-in-out"><FontAwesomeIcon icon={faSearch} /></li>
                     </ul>
                 </nav>

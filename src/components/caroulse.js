@@ -14,7 +14,7 @@ class caroulse extends React.Component {
     };
     render() {
         return (
-            <>
+            <div className="relative z-0">
                 <Swiper navigation={true} modules={[Navigation,Autoplay]} loop={true}
                 autoplay={{
                     delay: 5000,
@@ -28,7 +28,7 @@ class caroulse extends React.Component {
                     }
                     
                 </Swiper>
-            </>
+            </div>
         );
     }
 }
