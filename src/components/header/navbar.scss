@@ -10,7 +10,27 @@
     }
     &:hover{
         .dropdown-menu{
-            display: block;
+            display: float;
         }
     }
+}
+@media screen and (max-width:1024px) {
+    ul{
+        .dropdown{
+            &:hover{
+                .dropdown-menu{
+                display: block;
+                }
+            }
+            .dropdown-menu{
+                display: none;
+                position: static;
+            }
+            .dropdown-menu:first-child{
+                padding-top: 5px;
+                padding-left: 10px;
+            }
+        }
+    }
+    
 }
