@@ -16,10 +16,10 @@ class header extends React.Component {
                 <div className='container mx-auto 2xl:px-40'>
                     <div className='w-full inline-block'>
                         <div className="border-solid border-white bg-white border-2 rounded-b-lg w-fit float-right pb-1">
-                            <Link to="/" className="no-underline text-sky-500 m-1"><FontAwesomeIcon icon={faPersonChalkboard} /> Giáo viên</Link>
-                            <Link to="/" className="no-underline text-sky-500 m-1"><FontAwesomeIcon icon={faChalkboardUser} /> Sinh viên</Link>
-                            <Link to="/" className="no-underline text-sky-500 m-1"><FontAwesomeIcon icon={faEnvelope} /> Email</Link>
-                            <Link to="/" className="no-underline text-sky-500 m-1"><FontAwesomeIcon icon={faLock} /> Đăng nhập</Link>
+                            <Link to="https://smartevn.evn.com.vn/" className="no-underline text-sky-500 m-1"><FontAwesomeIcon icon={faPersonChalkboard} />Giáo viên</Link>
+                            <Link to="https://daotao.hepc.edu.vn/" className="no-underline text-sky-500 m-1"><FontAwesomeIcon icon={faChalkboardUser} /> Sinh viên</Link>
+                            <Link to="https://mail.evnspc.vn/" className="no-underline text-sky-500 m-1"><FontAwesomeIcon icon={faEnvelope} /> Email</Link>
+                            <Link to="/login" className="no-underline text-sky-500 m-1"><FontAwesomeIcon icon={faLock} /> Đăng nhập</Link>
                         </div>
                     </div>
                     <div className='grid grid-cols-4 gap-4'>

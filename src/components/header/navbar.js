@@ -8,6 +8,7 @@ class navbar extends React.Component {
     state={
         statusButton:true,
         class:"items-center uppercase text-white justify-center lg:flex hidden",
+        navbarClass:"bg-sky-500 relative z-50 ",
     }
 
     onHandleButton=()=>{
@@ -22,10 +23,27 @@ class navbar extends React.Component {
             this.setState({class:"items-center uppercase text-white justify-center lg:flex hidden"});
         }
     }
+    onScrollWindow=()=>{
+        if(window.scrollY>=150)
+        {
+            this.setState({navbarClass:"bg-sky-500 w-full z-50 fixed top-0 left-0"});
+        }
+        else{
+            this.setState({navbarClass:"bg-sky-500 relative z-50"});
+        }
+    }
+
+    componentDidMount=()=>{
+        window.addEventListener('scroll',this.onScrollWindow)
+    }
+
+    componentWillUnmount=()=>{
+        window.removeEventListener('scroll',this.onScrollWindow)
+    }
 
     render() {
         return (
-            <div className="bg-sky-500 relative z-50">
+            <div className={this.state.navbarClass} >
                 <nav className='container mx-auto 2xl:px-40'>
                     <button className="text-white lg:hidden p-4 button-menu" onClick={(e)=>this.onHandleButton()}><FontAwesomeIcon icon={faBars}/></button>
                     <ul className={this.state.class} >

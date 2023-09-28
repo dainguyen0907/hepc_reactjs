@@ -20,10 +20,10 @@ class caroulse extends React.Component {
                     delay: 5000,
                     disableOnInteraction: false,
                   }}
-                 className="mySwiper w-full h-2/4 ">
+                 className="mySwiper">
                     {
                         this.state.images.map(image=>
-                            <SwiperSlide><img src={image} alt="" className="w-full h-full max-h-96"/></SwiperSlide>
+                            <SwiperSlide><img src={image} alt="" className="w-full aspect-[4/1]"/></SwiperSlide>
                         )
                     }
                     
