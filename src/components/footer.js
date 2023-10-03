@@ -1,3 +1,5 @@
+import { faFacebook, faYoutube } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 
 class footer extends React.Component {
@@ -21,13 +23,15 @@ class footer extends React.Component {
                         </div>
                         <div className="px-5 col-span-2 md:col-span-1">
                             <div className="text-center md:text-right text-white text-base">
-                                Liên hệ với chúng tôi:
+                                <p>Liên hệ với chúng tôi:</p>
+                                <a className="border-blue-500 rounded-full bg-blue-500 aspect-square w-7 h-7 float-right text-center mx-1" href="/#"><FontAwesomeIcon className="hover:scale-150 ease-in-out duration-300" icon={faFacebook} /></a>
+                                <a className="border-red-500 rounded-full bg-red-500 aspect-square w-7 h-7 float-right text-center" href="/#"><FontAwesomeIcon className="hover:scale-150 ease-in-out duration-300" icon={faYoutube} /></a>
                             </div>
                         </div>
                     </div>
                     <hr />
                     <div className="text-center text-white p-5">
-                    © HEPC 2023 - All right reserved - Designed by Administrator
+                        © HEPC 2023 - All right reserved - Designed by Administrator
                     </div>
                 </div>
 

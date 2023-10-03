@@ -6,7 +6,7 @@ class cardPost extends React.Component {
     render() {
         return (
             <div className="w-full p-2 ">
-                <div className="border rounded-md bg-white">
+                <div className="border rounded-md bg-white border-gray-300">
                     <img src={image} alt="" className="w-full aspect-[2/1] object-cover" />
                     <Link to="/">
                         <div className="p-5 text-justify">
