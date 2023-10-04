@@ -9,11 +9,11 @@ class morePost extends React.Component{
                 <hr className="border"/>
                 Xem thêm:
                 <ul>
-                    <li><Link><FontAwesomeIcon icon={faPlus}/> Thông báo mới 1</Link></li>
-                    <li><Link><FontAwesomeIcon icon={faPlus}/> Thông báo mới 1</Link></li>
-                    <li><Link><FontAwesomeIcon icon={faPlus}/> Thông báo mới 1</Link></li>
-                    <li><Link><FontAwesomeIcon icon={faPlus}/> Thông báo mới 1</Link></li>
-                    <li><Link><FontAwesomeIcon icon={faPlus}/> Thông báo mới 1</Link></li>
+                    <li className="hover:text-blue-500"><Link><FontAwesomeIcon icon={faPlus}/> Thông báo mới 1</Link></li>
+                    <li className="hover:text-blue-500"><Link><FontAwesomeIcon icon={faPlus}/> Thông báo mới 1</Link></li>
+                    <li className="hover:text-blue-500"><Link><FontAwesomeIcon icon={faPlus}/> Thông báo mới 1</Link></li>
+                    <li className="hover:text-blue-500"><Link><FontAwesomeIcon icon={faPlus}/> Thông báo mới 1</Link></li>
+                    <li className="hover:text-blue-500"><Link><FontAwesomeIcon icon={faPlus}/> Thông báo mới 1</Link></li>
                 </ul>
             </div>
         );

@@ -13,11 +13,11 @@ class newAnouncement extends React.Component {
                 </div>
                 <div className="px-5">
                     <ul>
-                        <li className="border-t-2 py-2"><Link to="/#"><FontAwesomeIcon icon={faFireAlt} className="text-red-500"/> Thông báo mới</Link></li>
-                        <li className="border-t-2 py-2"><Link to="/#"><FontAwesomeIcon icon={faFireAlt} className="text-red-500"/> Thông báo mới</Link></li>
-                        <li className="border-t-2 py-2"><Link to="/#"><FontAwesomeIcon icon={faFireAlt} className="text-red-500"/> Thông báo mới</Link></li>
-                        <li className="border-t-2 py-2"><Link to="/#"><FontAwesomeIcon icon={faFireAlt} className="text-red-500"/> Thông báo mới</Link></li>
-                        <li className="border-t-2 py-2"><Link to="/#"><FontAwesomeIcon icon={faFireAlt} className="text-red-500"/> Thông báo mới</Link></li>
+                        <li className="border-t-2 py-2 hover:text-blue-500"><Link to="/#"><FontAwesomeIcon icon={faFireAlt} className="text-red-500"/> Thông báo mới</Link></li>
+                        <li className="border-t-2 py-2 hover:text-blue-500"><Link to="/#"><FontAwesomeIcon icon={faFireAlt} className="text-red-500"/> Thông báo mới</Link></li>
+                        <li className="border-t-2 py-2 hover:text-blue-500"><Link to="/#"><FontAwesomeIcon icon={faFireAlt} className="text-red-500"/> Thông báo mới</Link></li>
+                        <li className="border-t-2 py-2 hover:text-blue-500"><Link to="/#"><FontAwesomeIcon icon={faFireAlt} className="text-red-500"/> Thông báo mới</Link></li>
+                        <li className="border-t-2 py-2 hover:text-blue-500"><Link to="/#"><FontAwesomeIcon icon={faFireAlt} className="text-red-500"/> Thông báo mới</Link></li>
                     </ul>
                 </div>
             </div>
