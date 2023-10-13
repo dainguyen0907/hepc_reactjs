@@ -5,7 +5,6 @@ import NewAnouncement from "../components/newAnouncement";
 import PostDetail from "../components/postDetail";
 import MorePost from "../components/morePost";
 import Clock from "../components/clock";
-import PostList from "../components/postList";
 
 class postPage extends React.Component {
     render() {
@@ -14,9 +13,8 @@ class postPage extends React.Component {
                 <Title title="Tin tức" />
                 <div className="container mx-auto 2xl:px-40 grid grid-cols-1 md:grid-cols-3">
                     <div className="md:col-span-2">
-                        {/* <PostDetail />
-                        <MorePost /> */}
-                        <PostList/>
+                        <PostDetail />
+                        <MorePost />
                     </div>
                     <div className="md:col-span-1 ">
                         <Clock />
