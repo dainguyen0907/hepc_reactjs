@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 class catalogue extends React.Component {
     state = {
-        catalogueName: this.props.catalogueName,
+        catalogueName: this.props.catalogueName
     }
     render() {
         return (
@@ -14,14 +14,12 @@ class catalogue extends React.Component {
                 </div>
                 <div className="container mx-auto 2xl:px-40">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
-                        <CardPost />
-                        <CardPost />
-                        <CardPost />
-                        <CardPost />
-                        <CardPost />
-                        <CardPost />
-                        <CardPost />
-                        <CardPost />
+                        {
+                            this.props.article?this.props.article.map(
+                                (card,key)=><CardPost image={card.article_image} 
+                                date={card.createdAt} heading={card.article_heading}
+                                summarize={card.article_summarize}/>):''
+                        }
                     </div>
 
                     <div className="my-5 text-center">
