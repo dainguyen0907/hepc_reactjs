@@ -18,7 +18,7 @@ class catalogue extends React.Component {
                             this.props.article?this.props.article.map(
                                 (card,key)=><CardPost image={card.article_image} 
                                 date={card.createdAt} heading={card.article_heading}
-                                summarize={card.article_summarize}/>):''
+                                summarize={card.article_summarize} link={card.article_link}/>):''
                         }
                     </div>
 

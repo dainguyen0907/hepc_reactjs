@@ -13,7 +13,7 @@ class app extends React.Component {
       <Header/>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/detail" element={<PostPage/>} />
+          <Route path=":articleLink" element={<PostPage/>} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
         <Footer/>

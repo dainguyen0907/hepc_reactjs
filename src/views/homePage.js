@@ -8,14 +8,19 @@ import axios from "axios";
 
 class homePage extends React.Component{
     state={
-        article:[]
+        article:[],
+        announcement:[]
     }
     componentDidMount(){
         axios.get('http://localhost:8080/api/hot-articles')
         .then(res=>{
-            console.log(res.data);
             const article=res.data;
             this.setState({article});
+        }).catch(error=>console.log(error));
+        axios.get('http://localhost:8080/api/hot-announcements')
+        .then(res=>{
+            const announcement=res.data;
+            this.setState({announcement});
         }).catch(error=>console.log(error));
     }
     render(){
@@ -24,7 +29,7 @@ class homePage extends React.Component{
             <Carousel/>
             <Introduce/>
             <Catalogue catalogueName="Tin tức" article={this.state.article}/>
-            <Catalogue catalogueName="Thông báo"/>
+            <Catalogue catalogueName="Thông báo" article={this.state.announcement}/>
             <Admission />
             <Videos/>
             </>

@@ -1,10 +1,20 @@
 
 import { faFireAlt} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import axios from "axios";
 import React from "react";
 import { Link } from "react-router-dom";
 
 class newAnouncement extends React.Component {
+    state={
+        article:[],
+    }
+    componentDidMount(){
+        axios.get("http://localhost:8080/api/hot-announcements")
+        .then(res=>{
+            if(res.data!=null){this.setState({article:res.data})}
+        }).catch(error=>console.log(error));
+    }
     render() {
         return (
             <div className="w-full">
@@ -13,11 +23,9 @@ class newAnouncement extends React.Component {
                 </div>
                 <div className="px-5">
                     <ul>
-                        <li className="border-t-2 py-2 hover:text-blue-500"><Link to="/#"><FontAwesomeIcon icon={faFireAlt} className="text-red-500"/> Thông báo mới</Link></li>
-                        <li className="border-t-2 py-2 hover:text-blue-500"><Link to="/#"><FontAwesomeIcon icon={faFireAlt} className="text-red-500"/> Thông báo mới</Link></li>
-                        <li className="border-t-2 py-2 hover:text-blue-500"><Link to="/#"><FontAwesomeIcon icon={faFireAlt} className="text-red-500"/> Thông báo mới</Link></li>
-                        <li className="border-t-2 py-2 hover:text-blue-500"><Link to="/#"><FontAwesomeIcon icon={faFireAlt} className="text-red-500"/> Thông báo mới</Link></li>
-                        <li className="border-t-2 py-2 hover:text-blue-500"><Link to="/#"><FontAwesomeIcon icon={faFireAlt} className="text-red-500"/> Thông báo mới</Link></li>
+                        {this.state.article.map((value)=>
+                        <li className="border-t-2 py-2 hover:text-blue-500"><Link to={"/"+value.article_link}><FontAwesomeIcon icon={faFireAlt} className="text-red-500"/> {value.article_heading}</Link></li>)
+                        }
                     </ul>
                 </div>
             </div>
