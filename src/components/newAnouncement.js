@@ -10,7 +10,7 @@ class newAnouncement extends React.Component {
         article:[],
     }
     componentDidMount(){
-        axios.get("http://localhost:8080/api/hot-announcements")
+        axios.get("http://localhost:8080/api/announcement?value=5")
         .then(res=>{
             if(res.data!=null){this.setState({article:res.data})}
         }).catch(error=>console.log(error));

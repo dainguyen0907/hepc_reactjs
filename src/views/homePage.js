@@ -17,7 +17,7 @@ class homePage extends React.Component{
             const article=res.data;
             this.setState({article});
         }).catch(error=>console.log(error));
-        axios.get('http://localhost:8080/api/hot-announcements')
+        axios.get('http://localhost:8080/api/announcement')
         .then(res=>{
             const announcement=res.data;
             this.setState({announcement});
