@@ -28,8 +28,8 @@ class homePage extends React.Component{
             <>
             <Carousel/>
             <Introduce/>
-            <Catalogue catalogueName="Tin tức" article={this.state.article}/>
-            <Catalogue catalogueName="Thông báo" article={this.state.announcement}/>
+            <Catalogue catalogueName="Tin tức" article={this.state.article} catalogue="tin-tuc-HEPC/"/>
+            <Catalogue catalogueName="Thông báo" article={this.state.announcement} catalogue="thong-bao-HEPC/"/>
             <Admission />
             <Videos/>
             </>

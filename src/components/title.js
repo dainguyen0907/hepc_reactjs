@@ -9,7 +9,7 @@ class title extends React.Component {
         return (
             <div className="text-center object-cover object-center text-white py-5" style={{backgroundImage:`url(${bgImage})`}}>
                 <p><strong>{this.props.title}</strong></p>
-                <p><strong><Link to="/">Trang chủ</Link> <FontAwesomeIcon icon={faAnglesRight} /> {this.props.title}</strong></p>
+                <p><strong><Link to="/">Trang chủ</Link> <FontAwesomeIcon icon={faAnglesRight} /><Link to={"../"+this.props.catalogue}>{this.props.title}</Link> </strong></p>
             </div>
         );
     }

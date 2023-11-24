@@ -3,7 +3,6 @@ import { faFireAlt} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "axios";
 import React from "react";
-import { Link } from "react-router-dom";
 
 class newAnouncement extends React.Component {
     state={
@@ -24,7 +23,7 @@ class newAnouncement extends React.Component {
                 <div className="px-5">
                     <ul>
                         {this.state.article.map((value)=>
-                        <li className="border-t-2 py-2 hover:text-blue-500"><Link to={"/"+value.article_link}><FontAwesomeIcon icon={faFireAlt} className="text-red-500"/> {value.article_heading}</Link></li>)
+                        <li className="border-t-2 py-2 hover:text-blue-500"><a href={"/thongbao/"+value.article_link}><FontAwesomeIcon icon={faFireAlt} className="text-red-500"/> {value.article_heading}</a></li>)
                         }
                     </ul>
                 </div>

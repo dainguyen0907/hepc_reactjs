@@ -4,7 +4,7 @@ class clock extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
-            now: new Date().toLocaleString('vn-VN', { weekday: "long", day: "2-digit", month: "2-digit", year: "2-digit" }) + " " + new Date().toLocaleTimeString(),
+            now: new Date().toLocaleString('vn-VN', { weekday: "long", day: "2-digit", month: "2-digit", year: "numeric" }) + " " + new Date().toLocaleTimeString(),
         }
     }
     componentDidMount() {
@@ -15,7 +15,7 @@ class clock extends React.Component{
     }
     updateClock() {
         this.setState({
-            now: new Date().toLocaleString('vn-VN', { weekday: "long", day: "2-digit", month: "2-digit", year: "2-digit" }) + " " + new Date().toLocaleTimeString(),
+            now: new Date().toLocaleString('vn-VN', { weekday: "long", day: "2-digit", month: "2-digit", year: "numeric" }) + " " + new Date().toLocaleTimeString(),
         });
     }
     render(){

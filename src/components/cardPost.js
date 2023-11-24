@@ -1,6 +1,5 @@
 import React from "react";
 import image from "../assets/image/logo.png";
-import { Link } from "react-router-dom";
 
 class cardPost extends React.Component {
     render() {
@@ -8,7 +7,7 @@ class cardPost extends React.Component {
             <div className="w-full p-2 ">
                 <div className="border rounded-md bg-white border-gray-300">
                     <img src={this.props.img?this.props.img:image} alt={this.props.heading} className="w-full aspect-[2/1] object-cover" />
-                    <Link to={this.props.link}>
+                    <a href={this.props.link}>
                         <div className="p-5 text-justify">
                             <small className="">({new Date(this.props.date).toLocaleString('vn-VN', { day: "2-digit", month: "2-digit", year: "2-digit" })})</small>
                             <h4 className="uppercase font-medium text-center">{this.props.heading}</h4>
@@ -16,7 +15,7 @@ class cardPost extends React.Component {
                                 {this.props.summarize?this.props.summarize:'Không có nội dung'}
                             </div>
                         </div>
-                    </Link>
+                    </a>
                 </div>
             </div>
         );
