@@ -49,7 +49,7 @@ const App=()=> {
             <div className="container mx-auto 2xl:px-40 grid grid-cols-1 md:grid-cols-3">
                 <div className="md:col-span-2">
                     <CataloguePost article={articles} catalogue={param.catalogue}/>
-                    <Pagination currentPage={currentPage} param={param.catalogue} length={articlesValue%limit==0?Math.floor(articlesValue/limit):Math.floor(articlesValue/limit)+1}/>
+                    <Pagination currentPage={currentPage} param={param.catalogue} length={articlesValue%limit===0?Math.floor(articlesValue/limit):Math.floor(articlesValue/limit)+1}/>
                 </div>
                 <div className="md:col-span-1 ">
                     <Clock />

@@ -5,6 +5,7 @@ import PostPage from "./postPage";
 import CataloguePage from "./cataloguePage";
 import NotFoundPage from "./pageNotFound";
 import Header from "../components/header";
+import SearchBox from "../components/searchBox/searchBox";
 import Footer from "../components/footer";
 
 class app extends React.Component {
@@ -12,6 +13,7 @@ class app extends React.Component {
     return (
       <BrowserRouter>
       <Header/>
+      <SearchBox/>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path=":catalogue/:articleLink" element={<PostPage/>} />
