@@ -18,6 +18,7 @@ class app extends React.Component {
           <Route path="/" element={<HomePage />} />
           <Route path=":catalogue/:articleLink" element={<PostPage/>} />
           <Route path=":catalogue" element={<CataloguePage/>} />
+          <Route path="/login" />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
         <Footer/>

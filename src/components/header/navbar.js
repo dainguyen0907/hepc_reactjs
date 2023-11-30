@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faHome, faSearch } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
 import "./navbar.scss";
 import {toggle} from"../../reducers/setStatusSearchBox";
 import { useDispatch} from "react-redux";
@@ -10,7 +9,7 @@ import { useDispatch} from "react-redux";
 const App = () => {
     const [statusButton, setStatusButton] = useState(true);
     const [menuBarClass, setMenuBarClass] = useState('hidden');
-    const [navClass, setNavClass] = useState('');
+    const [navClass, setNavClass] = useState('relative');
     const onHandleButton = () => {
         setStatusButton(!statusButton);
         if (statusButton) {
@@ -22,10 +21,10 @@ const App = () => {
     useEffect(() => {
         const onScroll = () => {
             if (window.scrollY >= 150) {
-                setNavClass("fixed top-0 left-0");
+                setNavClass("w-full fixed top-0 left-0");
             }
             else {
-                setNavClass("");
+                setNavClass("relative");
             }
         }
         window.removeEventListener('scroll', onScroll);
@@ -36,11 +35,11 @@ const App = () => {
     const dispatch = useDispatch()
 
     return (
-        <div className={"bg-sky-500 relative z-50 "+navClass} >
+        <div className={"bg-sky-500 z-50 "+navClass} >
             <nav className='container mx-auto 2xl:px-40'>
                 <button className="text-white lg:hidden p-4 button-menu" onClick={(e)=>onHandleButton()}><FontAwesomeIcon icon={faBars} /></button>
                 <ul className={"items-center uppercase text-white justify-center lg:flex "+menuBarClass} >
-                    <li className="lg:border-r-2 border-dashed border-white p-2 lg:hover:bg-blue-500 lg:hover:scale-105 transition duration-300 ease-in-out "><Link to="/"><FontAwesomeIcon icon={faHome} /></Link></li>
+                    <li className="lg:border-r-2 border-dashed border-white p-2 lg:hover:bg-blue-500 lg:hover:scale-105 transition duration-300 ease-in-out "><a href="/"><FontAwesomeIcon icon={faHome} /></a></li>
                     <li className="lg:border-r-2 border-dashed border-white p-2 lg:hover:bg-blue-500 lg:hover:scale-105 transition duration-300 ease-in-out cursor-pointer dropdown">
                         Giới thiệu
                         <ul className="dropdown-menu">

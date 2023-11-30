@@ -1,6 +1,5 @@
 import React from "react";
 import CardPost from "./cardPost";
-import { Link } from "react-router-dom";
 
 class catalogue extends React.Component {
     render() {
@@ -20,9 +19,9 @@ class catalogue extends React.Component {
                     </div>
 
                     <div className="my-5 text-center">
-                        <Link to={"/"+this.props.catalogue} className="hover:bg-white hover:text-sky-500 duration-300 ease-in-out border 
+                        <a href={"/"+this.props.catalogue} className="hover:bg-white hover:text-sky-500 duration-300 ease-in-out border 
                         border-sky-500 rounded-lg p-2 my-2 text-white bg-sky-500 font-bold">
-                            Xem thêm</Link>
+                            Xem thêm</a>
                     </div>
                 </div>
 

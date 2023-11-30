@@ -4,20 +4,19 @@ import { useDispatch, useSelector } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch, faX } from "@fortawesome/free-solid-svg-icons";
 import { toggle } from "../../reducers/setStatusSearchBox";
-import { redirect, useNavigate } from "react-router-dom";
-
+import { useNavigate } from "react-router-dom";
+import { search } from "../../reducers/searchArticles";
 
 
 const App = () => {
     const status = useSelector((state) => state.statusSearchBox.value);
     const dispatch = useDispatch();
-    const [searchValue,setSearchValue]=useState('');
+    let keyword=useSelector((state) => state.searchArticles.value);
+    const [searchValue,setSearchValue]=useState(keyword);
     const navigate=useNavigate();
     const handleSumit=(e)=>{
-        let keyword=searchValue.replaceAll(/( )/g, '-');
-        keyword = keyword.replaceAll(/(\“|\”|\‘|\’|\,|\!|\&|\;|\@|\#|\%|\~|\`|\=|\_|\'|\]|\[|\}|\{|\)|\(|\+|\^)/g, '-');
-        keyword = keyword.replaceAll(/(\/)/g, '-');
-        navigate('/tim-kiem/'+keyword);
+        dispatch(search(searchValue));
+        navigate('/tim-kiem/'+searchValue);
     }
     return (
         <div className={"searchBox " + status}>

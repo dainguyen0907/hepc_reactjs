@@ -23,7 +23,7 @@ class newAnouncement extends React.Component {
                 <div className="px-5">
                     <ul>
                         {this.state.article.map((value)=>
-                        <li className="border-t-2 py-2 hover:text-blue-500"><a href={"/thongbao/"+value.article_link}><FontAwesomeIcon icon={faFireAlt} className="text-red-500"/> {value.article_heading}</a></li>)
+                        <li className="border-t-2 py-2 hover:text-blue-500"><a href={"/thong-bao-HEPC/"+value.article_link}><FontAwesomeIcon icon={faFireAlt} className="text-red-500"/> {value.article_heading}</a></li>)
                         }
                     </ul>
                 </div>
